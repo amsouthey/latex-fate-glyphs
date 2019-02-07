@@ -1,11 +1,14 @@
-\ProvidesPackage{fateglyphs}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fateglyphs}[2019/02/07]
 \RequirePackage{fontspec}
 
 \newfontfamily\fateglyphs{Fate Core Glyphs}
 \DeclareTextFontCommand{\fate}{\fateglyphs}
 
-
+% Prints a stress box with the given number as a left-hand superscript.
 \newcommand{\stress}[1]{$^{\small\sffamily \textbf{#1}}$\fate{1}}
+
+% Print between one and five stress boxes with increasingstress values.
 \newcommand{\stressone}{\stress{1}}
 \newcommand{\stresstwo}{\stressone\stress{2}}
 \newcommand{\stressthree}{\stresstwo\stress{3}}
