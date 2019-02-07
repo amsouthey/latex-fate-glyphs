@@ -1,33 +1,8 @@
-\ProvidesPackage{fate}
+\ProvidesPackage{fateglyphs}
 \RequirePackage{fontspec}
-\RequirePackage[inline]{enumitem}
-\RequirePackage[nobottomtitles*, clearempty]{titlesec}
-\RequirePackage{varioref}
-\RequirePackage[hidelinks]{hyperref}
-\RequirePackage{cleveref}
-\RequirePackage[final]{pdfpages}
-\RequirePackage{ragged2e}
 
-\setmainfont{EB Garamond}[Ligatures={TeX, Common}]
-\setsansfont{Montserrat}
-\newfontfamily\headingfont{Montserrat}
-
-\DeclareTextFontCommand{\fate}{\fateglyphs}
 \newfontfamily\fateglyphs{Fate Core Glyphs}
-
-
-\titleformat{\subsection}
-  {\headingfont\bfseries}{\thesubsection}{1em}{}
-
-
-\titleformat{\section}
-  {\headingfont\Large\bfseries}{}{0em}{\Large}
-
- 
-
-  \renewcommand{\thechapter}{\Roman{chapter}}
-\titleformat{\chapter}[display]
-  {\centering\headingfont\bfseries\scshape}{\chaptertitlename~\thechapter}{1ex}{\Huge}
+\DeclareTextFontCommand{\fate}{\fateglyphs}
 
 
 \newcommand{\stress}[1]{$^{\small\sffamily \textbf{#1}}$\fate{1}}
